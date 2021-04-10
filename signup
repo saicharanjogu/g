@@ -1,0 +1,309 @@
+import React, { Component } from "react";
+import {
+  StyleSheet,
+  View,
+  StatusBar,
+  Text,
+  TextInput,
+  TouchableOpacity
+} from "react-native";
+import Svg, { Ellipse } from "react-native-svg";
+
+function Untitled(props) {
+  return (
+    <View style={styles.container}>
+      <StatusBar animated barStyle="light-content" />
+      <View style={styles.ellipseStackStack}>
+        <View style={styles.ellipseStack}>
+          <Svg viewBox="0 0 209.03 209.03" style={styles.ellipse}>
+            <Ellipse
+              stroke="rgba(230, 230, 230,1)"
+              strokeWidth={0}
+              fill="rgba(241,83,83,0.46)"
+              cx={105}
+              cy={105}
+              rx={105}
+              ry={105}
+            ></Ellipse>
+          </Svg>
+          <Text style={styles.loremIpsum}>
+            you are {"\n"}one step ahead..!!
+          </Text>
+          <Text style={styles.hi}>Hi,</Text>
+        </View>
+        <View style={styles.ellipse3Stack}>
+          <Svg viewBox="0 0 209.03 209.03" style={styles.ellipse3}>
+            <Ellipse
+              stroke="rgba(230, 230, 230,1)"
+              strokeWidth={0}
+              fill="rgba(164,138,255,0.32)"
+              cx={105}
+              cy={105}
+              rx={105}
+              ry={105}
+            ></Ellipse>
+          </Svg>
+          <TextInput
+            placeholder="Mail ID"
+            textBreakStrategy="highQuality"
+            placeholderTextColor="rgba(150,150,150,1)"
+            returnKeyType="next"
+            style={styles.mailId}
+          ></TextInput>
+          <TextInput
+            placeholder="Password"
+            textBreakStrategy="highQuality"
+            placeholderTextColor="rgba(150,150,150,1)"
+            returnKeyType="next"
+            secureTextEntry={true}
+            style={styles.textInput}
+          ></TextInput>
+          <TextInput
+            placeholder="Re type Password"
+            textBreakStrategy="highQuality"
+            placeholderTextColor="rgba(150,150,150,1)"
+            returnKeyType="next"
+            secureTextEntry={true}
+            style={styles.textInput2}
+          ></TextInput>
+          <TextInput
+            placeholder="Username"
+            textBreakStrategy="highQuality"
+            placeholderTextColor="rgba(150,150,150,1)"
+            returnKeyType="next"
+            style={styles.textInput3}
+          ></TextInput>
+        </View>
+      </View>
+      <View style={styles.ellipse2Stack}>
+        <Svg viewBox="0 0 209.03 209.03" style={styles.ellipse2}>
+          <Ellipse
+            stroke="rgba(230, 230, 230,1)"
+            strokeWidth={0}
+            fill="rgba(0,6,255,0.27)"
+            cx={105}
+            cy={105}
+            rx={105}
+            ry={105}
+          ></Ellipse>
+        </Svg>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Untitled")}
+          style={styles.button}
+        >
+          <Text style={styles.letsGo}>Lets Go.!!</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2}>
+          <View style={styles.alreadyAUserRow}>
+            <Text style={styles.alreadyAUser}>Already a user..??</Text>
+            <Text style={styles.login}>Login</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  ellipse: {
+    top: 0,
+    left: 0,
+    width: 289,
+    height: 289,
+    position: "absolute"
+  },
+  loremIpsum: {
+    top: 215,
+    left: 136,
+    position: "absolute",
+    fontFamily: "poppins-regular",
+    color: "rgba(0,0,0,1)",
+    fontSize: 36
+  },
+  hi: {
+    top: 150,
+    left: 136,
+    position: "absolute",
+    fontFamily: "poppins-regular",
+    color: "rgba(255,0,0,1)",
+    fontSize: 50
+  },
+  ellipseStack: {
+    top: 0,
+    left: 0,
+    width: 457,
+    height: 325,
+    position: "absolute"
+  },
+  ellipse3: {
+    top: 0,
+    left: 205,
+    width: 289,
+    height: 289,
+    position: "absolute"
+  },
+  mailId: {
+    top: 124,
+    left: 0,
+    position: "absolute",
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    height: 40,
+    width: 287,
+    borderWidth: 1,
+    borderColor: "rgba(197,197,197,1)",
+    borderStyle: "solid",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 42,
+    shadowOpacity: 1,
+    shadowRadius: 14
+  },
+  textInput: {
+    top: 187,
+    left: 0,
+    position: "absolute",
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    height: 40,
+    width: 287,
+    borderWidth: 1,
+    borderColor: "rgba(197,197,197,1)",
+    borderStyle: "solid",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 42,
+    shadowOpacity: 1,
+    shadowRadius: 14
+  },
+  textInput2: {
+    top: 249,
+    left: 0,
+    position: "absolute",
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    height: 40,
+    width: 287,
+    borderWidth: 1,
+    borderColor: "rgba(197,197,197,1)",
+    borderStyle: "solid",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 42,
+    shadowOpacity: 1,
+    shadowRadius: 14
+  },
+  textInput3: {
+    top: 63,
+    left: 0,
+    position: "absolute",
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    height: 40,
+    width: 287,
+    borderWidth: 1,
+    borderColor: "rgba(197,197,197,1)",
+    borderStyle: "solid",
+    borderRadius: 5,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 42,
+    shadowOpacity: 1,
+    shadowRadius: 14
+  },
+  ellipse3Stack: {
+    top: 290,
+    left: 136,
+    width: 494,
+    height: 289,
+    position: "absolute"
+  },
+  ellipseStackStack: {
+    width: 630,
+    height: 579,
+    marginTop: -47,
+    marginLeft: -102
+  },
+  ellipse2: {
+    top: 38,
+    left: 111,
+    width: 289,
+    height: 289,
+    position: "absolute"
+  },
+  button: {
+    top: 0,
+    left: 0,
+    width: 287,
+    height: 39,
+    position: "absolute",
+    backgroundColor: "rgba(255,0,0,1)",
+    borderWidth: 1,
+    borderColor: "rgba(255,0,0,1)",
+    borderRadius: 5
+  },
+  letsGo: {
+    fontFamily: "poppins-600",
+    color: "rgba(255,255,255,1)",
+    fontSize: 23,
+    marginLeft: 91
+  },
+  button2: {
+    top: 51,
+    left: 0,
+    width: 287,
+    height: 39,
+    position: "absolute",
+    backgroundColor: "rgba(31,3,251,1)",
+    borderWidth: 1,
+    borderColor: "rgba(255,0,0,1)",
+    borderRadius: 5,
+    flexDirection: "row"
+  },
+  alreadyAUser: {
+    fontFamily: "poppins-100italic",
+    color: "rgba(255,255,255,1)",
+    fontSize: 12,
+    marginTop: 9
+  },
+  login: {
+    fontFamily: "poppins-600",
+    color: "rgba(255,255,255,1)",
+    fontSize: 23,
+    marginLeft: 8
+  },
+  alreadyAUserRow: {
+    height: 34,
+    flexDirection: "row",
+    flex: 1,
+    marginRight: 112,
+    marginLeft: 5,
+    marginTop: 3
+  },
+  ellipse2Stack: {
+    width: 400,
+    height: 327,
+    marginTop: 68,
+    marginLeft: 34
+  }
+});
+
+export default Untitled;
